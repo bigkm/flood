@@ -145,6 +145,13 @@ parse_cfg_parm( JOB_DATA *job_data, char *k, char *v )
         if ( !( job_data->parmsset & JD_CNT ) )
             job_data->cnt = atol( v );
 
+    } else if ( strcmp( k, "concurrency" ) == 0 ) {
+		
+        LOG( "Cuncurrent (fdf): '%s'\n", v );
+		
+        if ( !( job_data->parmsset & JD_CONCURCY ) )
+            job_data->concurrency = MAX(1, MIN(atol( v ), 500));
+		
     } else if ( strcmp( k, "verbose" ) == 0 ) {
 
         LOG( "Be verbose (fdf): '%s'\n", v );
