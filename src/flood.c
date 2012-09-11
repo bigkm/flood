@@ -604,7 +604,7 @@ print_help()
 
     printf( "\n" );
     printf( "%s\n\n", APPNAMELONG );
-    printf( "usage: flood [-b] [-A] [-a] [-P] [-p] [-d] [-l] [-s] [-c] [-t] [-m] [-v] [-h]\n" );
+    printf( "usage: flood [-b] [-A] [-a] [-P] [-p] [-d] [-l] [-s] [-c] [-C] [-t] [-m] [-v] [-h]\n" );
     printf( "-b\tUse broadcast flag\n" );
     printf( "-a\tDestination address\n" );
     printf( "-A\tSource address (not implemented yet)\n" );
@@ -614,6 +614,7 @@ print_help()
     printf( "-l\tLoad %s data file or raw data file\n", APPNAME );
     printf( "-s\tSize of payload\n" );
     printf( "-c\tNumber of packets to send\n" );
+    printf( "-C\tConcurrency, Total Packets = values of -c * -C\n" );
     printf( "-t\tUse TCP instead of UDP\n" );
     printf( "-m\tUse multicast (not implemented yet)\n" );
     printf( "-r\tContinue after socket error\n" );
