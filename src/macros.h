@@ -29,6 +29,12 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+#ifndef MAX
+#define MAX(A,B) ((A) < (B) ? B : A)
+#endif
+#ifndef MIN
+#define MIN(A,B) ((A) < (B) ? A : B)
+#endif
 
 #ifdef DEBUG
 #define LOG( format, ... ) fprintf( stderr, APPNAME"[%d]: "format, (int)getpid(), ##__VA_ARGS__ );
