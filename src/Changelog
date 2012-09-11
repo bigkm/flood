@@ -1,0 +1,28 @@
+$Id: Changelog,v 1.4 2008-09-22 18:34:09 welle Exp $
+
+
+Changes with flood 0.2.2
+
+  - Make parameters available via FlOoD dAtA fIlE:
+      sourceaddress (srcaddr), sourceport (srcport),
+      destinationaddress (dstaddr), destinationport (dstport),
+      broadcast (bcast), multicast (mcast), tcp,
+      delay, packets, verbose
+      
+    These parameters are overwritable by their command line
+    equivalents.
+	
+  - Ignore thrown SIGPIPE on platforms that don't support the
+    MSG_NOSIGNAL flag.
+
+
+	
+Changes with flood 0.2.1
+
+ - Allow more than one placeholder per line in templates.
+
+	
+	
+Changes with flood 0.2
+
+ First release. No changes yet.

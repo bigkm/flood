@@ -1,0 +1,34 @@
+# FlOoD dAtA fIlE
+
+#
+# $Id: httpget.flood,v 1.8 2008-09-22 18:31:04 welle Exp $
+#
+
+# HTTP Get Request for the Flood Network Packet Generator
+
+#
+# Configuration parameters
+#
+cfg.template=/usr/local/share/flood/tpl/httpget.tpl
+
+# The web server we want to query
+cfg.dstaddr=localhost
+cfg.dstport=80
+
+# Use TCP protocol
+cfg.tcp=1
+
+# Send 1 packet
+cfg.packets=1
+
+# Be verbose
+cfg.verbose=1
+
+
+#
+# Template parameters
+#
+tpl.host:String=127.0.0.1
+tpl.url:String=/index.html
+tpl.CRLF:ByteField=13,10
+tpl.SPACE:Byte=32

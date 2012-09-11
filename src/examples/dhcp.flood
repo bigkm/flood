@@ -1,0 +1,40 @@
+# FlOoD dAtA fIlE
+
+#
+# $Id: dhcp.flood,v 1.6 2008-09-21 14:12:48 welle Exp $
+#
+
+# DHCP Discover for the Flood Network Packet Generator
+
+#
+# Configuration parameters
+#
+cfg.template=/usr/share/flood/tpl/dhcp.tpl
+
+# We use the broadcast flag here. Use the destinationaddress
+# configuration parameter if you want to connect to a particular
+# dhcp/bootp server.
+cfg.bcast=1
+cfg.dstport=67
+
+# Send 1 packet
+cfg.packets=1
+
+# Be verbose
+cfg.verbose=1
+
+
+#
+# Template parameters
+#
+tpl.hops:Byte=0
+tpl.xid:ByteField=42,42,42,42
+tpl.time:ByteField=0,1
+tpl.flags:ByteField=0,0
+tpl.ciaddr:ByteField=0,0,0,0
+tpl.yiaddr:ByteField=0,0,0,0
+tpl.siaddr:ByteField=0,0,0,0
+tpl.giaddr:ByteField=0,0,0,0
+tpl.cha:ByteField=0,17,34,51,68,85,0,0,0,0,0,0,0,0,0,0
+tpl.sip:ByteField=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+tpl.bfn:ByteField=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

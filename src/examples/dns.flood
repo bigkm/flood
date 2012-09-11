@@ -1,0 +1,35 @@
+# FlOoD dAtA fIlE
+
+#
+# $Id: dns.flood,v 1.7 2008-09-21 14:12:48 welle Exp $
+#
+
+# DNS Query for the Flood Network Packet Generator
+
+#
+# Configuration parameters
+#
+cfg.template=/usr/local/share/flood/tpl/dns.tpl
+
+# The dns server we want to query
+cfg.dstaddr=localhost
+cfg.dstport=53
+
+# Send 1 packet
+cfg.packet=1
+
+# Be verbose
+cfg.verbose=1
+
+
+#
+# Template parameters
+#
+tpl.hops:Byte=0
+tpl.xid:ByteField=42,42
+tpl.flags:ByteField=1,0
+
+# www.c0t0d0s0.de
+tpl.name:ByteField=3,119,119,119,8,99,48,116,48,100,48,115,48,2,100,101,0
+tpl.type:ByteField=0,1
+tpl.class:ByteField=0,1

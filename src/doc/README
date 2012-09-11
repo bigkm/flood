@@ -1,0 +1,60 @@
+$Id: README,v 1.7 2008-09-22 18:31:58 welle Exp $
+
+
+Installation
+~~~~~~~~~~~~
+1) Get the latest software release from [1]
+
+
+2a) Use dpkg, rpm or any other tool you like to install 
+    the distribution specific packet (if any).
+
+2b) If you decided to grab the source code you have to compile and
+    install the flood application before usage. Create a temporary
+    directory for building the binary and extract the archive there: 
+
+Stella:~> mkdir -p /tmp/flood && cd /tmp/flood
+Stella:/tmp/flood> gzip -dc .../flood-0.2.2.tar.gz | tar xf -
+
+
+3) Compile the application and install the binary, documentation and
+   template files: 
+
+Stella:/tmp/flood> make
+Stella:/tmp/flood> make install
+
+Before starting the compilation you may have a short look at the
+Makefile. There are some platform specific settings for Solaris.
+
+You may need to gain administrative access rights before installation.
+
+The default installation location is in the /usr/local/ directory
+tree. You my override this with some other location:
+
+Stella:/tmp/flood> make INSTALLDIR=/some/other/location install
+
+
+Usage
+~~~~~
+
+Please have a look at the file DOCUMENTATION.
+
+
+Feedback
+~~~~~~~~
+Feel free to contact me (mwe012008@gmx.net) and tell me your opinion about
+Flood. Do you find Flood useful? Perhaps you have some feature requests?
+More protocol templates? How do you use the tool? Your opinion is greatly
+appreciated. 
+
+
+License
+~~~~~~~
+All Flood stuff is released under the GNU General Public License [2],
+Version 2.
+
+
+Footnotes
+~~~~~~~~~
+[1] http://www.c0t0d0s0.de/flood/flood.html
+[2] http://www.gnu.org/licenses/gpl.html
