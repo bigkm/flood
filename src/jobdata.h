@@ -59,7 +59,7 @@ typedef struct  {
     char          verbose;
     char          *templatefile;
     char          *datafile;
-    unsigned      payloadsize;
+    size_t        payloadsize;
     unsigned char *payload;
     long          reactonerr;
     long          parmsset;

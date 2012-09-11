@@ -123,7 +123,7 @@ patch_hex_field( char *v, unsigned char *patched )
 int
 patch_string( char *v, unsigned char *patched )
 {
-    int len;
+    size_t len;
     int i;
 
 
@@ -143,7 +143,7 @@ patch_string( char *v, unsigned char *patched )
 
     } /* for */
 
-    return len;
+    return (int)len;
 
 } /* patch_string */
 
@@ -173,7 +173,7 @@ patch_value( char *key, char *val,
 {
     char *value;
     char *type;
-    int  len;
+    size_t  len;
     int  i;
     int  ret;
 

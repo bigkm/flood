@@ -279,9 +279,9 @@ int
 load_raw_payload_from_file( JOB_DATA *job_data )
 {
     struct stat buf;
-    int remainder;
-    int ret;
-    int size;
+    size_t remainder;
+    size_t ret;
+    size_t size;
     int fd;
 
 
@@ -457,7 +457,7 @@ flood( JOB_DATA job_data )
 {
     long long cnt;
     int       s_fd;
-    int       ret;
+    size_t    ret;
 
 
     s_fd = create_client_socket( job_data );
@@ -520,7 +520,7 @@ flood( JOB_DATA job_data )
         } /* if */
 
         if ( job_data.delay > 0 )
-            usleep( job_data.delay );
+            usleep((useconds_t) job_data.delay );
     
     } while ( isFlooding == 1
               && ( job_data.cnt == 0 || job_data.cnt > cnt ) );

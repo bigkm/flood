@@ -41,7 +41,7 @@
 void
 strip_crlf( char *line )
 {
-    int len;
+    size_t len;
 
     
     if ( line ) { // Should not need this, cause line is a static buffer

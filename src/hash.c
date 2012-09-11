@@ -107,7 +107,7 @@ char*
 get_type_of_value( char *key )
 {
     int i;
-    int len;
+    size_t len;
 
 
     for ( i = 0; i < MAXHASHENTRIES; i++ ) {
@@ -133,7 +133,7 @@ char*
 get_value( char *key )
 {
     int i;
-    int len;
+    size_t len;
 
 
     for ( i = 0; i < MAXHASHENTRIES; i++ ) {
