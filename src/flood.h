@@ -44,7 +44,7 @@
 /* 
 ** Definitions specific to plattforms
 */
-#ifdef _SOLARIS_
+#if defined(_SOLARIS_) || defined(__MACH__)
 #undef _HAVE_MSG_NOSIGNAL_
 #endif
 
