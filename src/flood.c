@@ -178,7 +178,7 @@ append_to_payload( JOB_DATA *job_data, unsigned char *field, int len )
     unsigned char *tmp;
 
     
-    LOG( "realloc to %d bytes\n", job_data->payloadsize + len );
+    LOG( "realloc to %zd bytes\n", job_data->payloadsize + len );
 
     tmp = realloc( job_data->payload,
                    job_data->payloadsize + len );
@@ -370,7 +370,7 @@ create_byte_filled_payload( JOB_DATA *job_data, unsigned char fill )
     if ( job_data->payloadsize == 0 ) 
         job_data->payloadsize = DEFAULTPAYLOADSIZE;
 
-    ERR( "Creating payload filled with %d bytes containing '0x%x'.\n",
+    ERR( "Creating payload filled with %zd bytes containing '0x%x'.\n",
          job_data->payloadsize, fill );
 
     if ( NULL == ( job_data->payload = malloc( job_data->payloadsize ) ) ) {

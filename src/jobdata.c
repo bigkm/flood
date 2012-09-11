@@ -121,7 +121,7 @@ print_job_data( JOB_DATA job_data )
         printf( "Loading payload from file: %s\n",
                 job_data.datafile );
 
-    printf( "Size of payload: %d bytes\n", job_data.payloadsize );
+    printf( "Size of payload: %zd bytes\n", job_data.payloadsize );
 
     if ( job_data.cnt == 0 )
         printf( "Sending packets forever\n" );
