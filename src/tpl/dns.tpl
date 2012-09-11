@@ -1,5 +1,5 @@
 #
-# $Id: dns.tpl,v 1.3 2008-09-07 19:31:54 welle Exp $
+# 
 #
 
 # DNS Query Template for the Flood Network Packet Generator

@@ -1,9 +1,4 @@
 /*
-** $Id: patcher.h,v 1.5 2008-09-14 12:51:19 welle Exp $
-*/
-
-
-/*
  * This file is part of flood.
  *
  * This program is free software; you can redistribute it and/or modify

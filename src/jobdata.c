@@ -1,5 +1,5 @@
 /*
-** $Id: jobdata.c,v 1.4 2008-09-21 14:14:12 welle Exp $
+** 
 */
 
 
@@ -72,9 +72,7 @@ init_job_data( JOB_DATA *job_data )
 
 
 
-/*
-**
-*/
+
 void
 free_job_data( JOB_DATA *job_data )
 {

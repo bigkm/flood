@@ -1,9 +1,4 @@
 /*
-** $Id: datafile.h,v 1.3 2008-09-21 12:05:16 welle Exp $
-*/
-
-
-/*
  * This file is part of flood.
  *
  * This program is free software; you can redistribute it and/or modify

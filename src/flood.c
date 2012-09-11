@@ -1,9 +1,4 @@
 /*
-** $Id: flood.c,v 1.22 2008-09-21 14:14:36 welle Exp $
-*/
-
-
-/*
  * This file is part of flood.
  *
  * This program is free software; you can redistribute it and/or modify

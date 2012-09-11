@@ -1,9 +1,4 @@
 /*
-** $Id: hash.h,v 1.4 2008-09-07 19:54:05 welle Exp $
-*/
-
-
-/*
  * This file is part of flood.
  *
  * This program is free software; you can redistribute it and/or modify

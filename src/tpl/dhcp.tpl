@@ -1,5 +1,5 @@
 #
-# $Id: dhcp.tpl,v 1.2 2008-09-07 19:31:54 welle Exp $
+# 
 #
 
 # DHCP Discover Template for the Flood Network Packet Generator

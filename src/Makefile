@@ -1,5 +1,5 @@
 #
-# $Id: Makefile,v 1.5 2008-09-21 14:17:34 welle Exp $
+# 
 #
 
 OBJECTS = flood.o hash.o patcher.o datafile.o jobdata.o

@@ -1,9 +1,4 @@
 /*
-** $Id: macros.h,v 1.7 2008-09-14 14:18:03 welle Exp $
-*/
-
-
-/*
  * This file is part of flood.
  *
  * This program is free software; you can redistribute it and/or modify

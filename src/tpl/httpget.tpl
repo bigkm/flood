@@ -1,5 +1,5 @@
 #
-# $Id: httpget.tpl,v 1.5 2008-09-21 14:13:22 welle Exp $
+# 
 #
 
 # HTTP Get Request Template for the Flood Network Packet Generator
