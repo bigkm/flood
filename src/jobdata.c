@@ -51,6 +51,7 @@ init_job_data( JOB_DATA *job_data )
     job_data->dport        = 4242;
     job_data->delay        = 1000 * 1000;
     job_data->cnt          = 0;
+    job_data->concurrency  = 1;
     job_data->verbose      = 0;
     job_data->tcp          = 0;
     job_data->mcast        = 0;
@@ -128,7 +129,10 @@ print_job_data( JOB_DATA job_data )
     else
         printf( "Sending %lld packet%s",
                 job_data.cnt, ( job_data.cnt == 1 ? "\n" : "s\n" ) );
-        
+	
+	if (job_data.concurrency > 1) {
+		printf("Sending packets with %zd concurrency\n", job_data.concurrency);
+	}
     printf( "\n" );
     
 } /* print_job_data */

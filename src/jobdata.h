@@ -54,6 +54,7 @@ typedef struct  {
     char          *daddr;
     long          delay;
     long long     cnt;
+    size_t		  concurrency;
     char          tcp;
     char          mcast;
     char          verbose;
