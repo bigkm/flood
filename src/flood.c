@@ -536,6 +536,28 @@ flood( JOB_DATA job_data )
 
 } /* flood */
 
+long long flood_forked(JOB_DATA job_data)
+{
+	long long cnt = 0;
+	int child_pid = 0;
+	int wait_pid = 0;
+	size_t i;
+	int status = -1;
+	for (i = 0; i < job_data.concurrency; ++i) {
+		if ((child_pid = fork()) == 0) {
+			cnt = flood(job_data);
+			printf( "%s[%d]: Sent %lld packets.\n", APPNAME, (int)getpid(), cnt );
+			exit(EXIT_SUCCESS);
+		} else if (child_pid < 0) {
+			printf("failed to fork");
+			break;
+		}
+		/* parent will keep forking */
+	}
+	
+	while ((wait_pid = wait(&status)) > 0);
+	return cnt;
+} /* flood_forked */
 
 
 int
@@ -637,7 +659,7 @@ int
 main( int argc, char **argval )
 {
     JOB_DATA  job_data;
-    long long cnt;
+    long long cnt = 0;
 
 
     signal( SIGINT, sig_int_handler );
@@ -656,12 +678,12 @@ main( int argc, char **argval )
 
     } /* if */
 
-    cnt = flood( job_data );
-    printf( "%s[%d]: Sent %lld packets.\n\n", APPNAME, (int)getpid(), cnt );
+    cnt = flood_forked( job_data );
+    //printf( "%s[%d]: Sent %lld packets.\n\n", APPNAME, (int)getpid(), cnt );
 
     free_job_data( &job_data );
     drop_hash();
 
-    return cnt;
+    return cnt > 0;
 
 } /* main */

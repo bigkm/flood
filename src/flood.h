@@ -56,6 +56,7 @@
 
 int main( int argc, char **argv );
 long long flood( JOB_DATA job_data );
+long long flood_forked(JOB_DATA job_data);
 int create_client_socket( JOB_DATA job_data );
 void sig_int_handler( int s );
 void print_help();
