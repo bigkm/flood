@@ -24,7 +24,7 @@
 #include "jobdata.h"
 
 #define APPNAME     "Flood"
-#define APPVER      "v0.2.3"
+#define APPVER      "v0.2.4"
 #define APPNAMELONG APPNAME " " APPVER " - Your friendly network packet generator"
 
 #define DEFAULTPAYLOADSIZE 128

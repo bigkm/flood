@@ -1,3 +1,6 @@
+WIP with flood 0.2.4
+  - Add concurrency flags
+  - Add concurrency support for datafiles
 
 
 Changes with flood 0.2.2
