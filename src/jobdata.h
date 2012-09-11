@@ -43,6 +43,7 @@
 #define JD_REACTONERR  1<<9
 #define JD_CNT         1<<10
 #define JD_PAYLOADSIZE 1<<11
+#define JD_CONCURCY    1<<12
 
 
 typedef struct  {
