@@ -78,7 +78,7 @@ parse_cmd_line( int argc, char **argv, JOB_DATA *job_data )
     init_job_data( job_data );
 
 
-    while ( ( o = getopt( argc, argv, "bp:P:a:A:d:c:s:l:rtmvh" ) ) != EOF ) {
+    while ( ( o = getopt( argc, argv, "bp:P:a:A:d:c:C:s:l:rtmvh" ) ) != EOF ) {
  
         switch ( o ) {
 
@@ -119,6 +119,11 @@ parse_cmd_line( int argc, char **argv, JOB_DATA *job_data )
         case 'c':
             job_data->cnt = atol( optarg );
             job_data->parmsset |= JD_CNT;
+            break;
+
+        case 'C':
+            job_data->concurrency = MAX(1, MIN(atol( optarg ), 500));
+            job_data->parmsset |= JD_CONCURCY;
             break;
 
         case 's':
